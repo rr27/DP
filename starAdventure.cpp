@@ -57,6 +57,7 @@ int main()
 						if(x0>0 && x1>0) c = max(c,dp[steps-1][x0-1][x1-1][x2]);
 						if(x0>0 && x2>0) c = max(c,dp[steps-1][x0-1][x1][x2-1]);
 						if(x1>0 && x2>0) c = max(c,dp[steps-1][x0][x1-1][x2-1]);
+						if(x1>0 && x2>0 && x0>0) c = max(c,dp[steps-1][x0-1][x1-1][x2-1]);
 					}
 					c += (city[y0][x0])- '0';
 					if(x1 != x0) c += city[y1][x1] - '0';  
